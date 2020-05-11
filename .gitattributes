@@ -1,0 +1,2 @@
+*.sql linguist-language=python
+*.json linguist-language=python
