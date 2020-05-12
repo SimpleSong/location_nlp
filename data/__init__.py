@@ -71,7 +71,7 @@ class MySqlutils(object):
 def build_and_do(district, pid, mySqlutils):
     regionCity = RegionCity()
     regionCity.name = district['name']
-    regionCity.adcode = district['name']
+    regionCity.adcode = district['adcode']
     regionCity.center = district['center']
     regionCity.level = district['level']
     regionCity.pid = pid
@@ -88,7 +88,6 @@ def build_and_do(district, pid, mySqlutils):
         build_and_do(c_district, regionCity.id, mySqlutils)
 
 if __name__ == '__main__':
-    # 通过高德地图获取
     # geography_data = geography_data_init()
     # 通过历史文件数据获取
     geography_data = geography_data_init_by_file()
